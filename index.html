@@ -1,23 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Redirecting...</title>
 </head>
 <body>
-  <p>Redirecting...</p>
 
-  <script src="links.js"></script>
+<p>Redirecting...</p>
 
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const id = params.get("u");
+<script src="links.js"></script>
 
-    if (id && REDIRECTS[id]) {
-      window.location.replace(REDIRECTS[id]);
-    } else {
-      document.body.innerHTML = "<h2>Link not found</h2>";
-    }
-  </script>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("u");
+
+  if (id && REDIRECTS[id]) {
+    window.location.replace(REDIRECTS[id]);
+  } else {
+    document.body.innerHTML = "<h2>Link not found</h2>";
+  }
+</script>
+
 </body>
 </html>
